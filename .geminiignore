@@ -1,0 +1,35 @@
+# Environment & Secrets
+.env
+.env.*
+
+# Dependencies, Build & Runtime Data
+node_modules/
+dist/
+build/
+.turbo/
+.aegis-runtime/
+**/.aegis-runtime/
+.opencyber-data/
+coverage/
+*.log
+*.har
+*.har.json
+
+# External Agent System Prompts, Security Directives & Test Fixtures
+# (Excluded from IDE background context indexing to prevent classifier false positives)
+prompts/
+templates/
+*.prompt.md
+packages/sec-harness/src/prompts.ts
+packages/sec-harness/src/coordinator.ts
+packages/sec-harness/src/skills.ts
+packages/agents/src/prompt-guard.ts
+packages/agents/src/lead-orchestrator.ts
+packages/agents/src/posture-auditor.ts
+packages/agents/src/recon-subagent.ts
+packages/agents/src/program-ingestor.ts
+packages/agents/test/
+apps/control-plane/src/demo-target.ts
+apps/control-plane/src/pipeline.ts
+apps/control-plane/test/
+apps/dashboard/src/emptyState.ts

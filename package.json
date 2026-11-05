@@ -1,0 +1,26 @@
+{
+  "name": "opencyber-aegis-gitops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "NODE_USE_ENV_PROXY=1 node --env-file-if-exists=.env apps/control-plane/dist/cli.js",
+    "build": "turbo run build",
+    "test": "NODE_USE_ENV_PROXY=1 turbo run test",
+    "typecheck": "turbo run typecheck",
+    "dev:api": "NODE_USE_ENV_PROXY=1 pnpm --filter @opencyber/control-plane dev",
+    "dev:ui": "pnpm --filter @opencyber/dashboard dev"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "dotenv": "^18.0.9",
+    "tsx": "^4.23.15",
+    "turbo": "^2.11.10",
+    "typescript": "^5.9.0",
+    "vitest": "^5.1.0"
+  }
+}

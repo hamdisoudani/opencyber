@@ -1,0 +1,38 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "env": [
+        "E2B_API_KEY",
+        "OPENROUTER_API_KEY",
+        "OPENROUTER_BASE_URL",
+        "OPENROUTER_ORCHESTRATOR_MODEL",
+        "AEGIS_ORCHESTRATOR_PROVIDER",
+        "GROQ_API_KEY",
+        "GROQ_ORCHESTRATOR_MODEL",
+        "GROQ_SUBAGENT_MODEL",
+        "GROQ_PROMPT_GUARD_MODEL",
+        "AEGIS_HMAC_SECRET",
+        "NODE_USE_ENV_PROXY",
+        "HTTP_PROXY",
+        "HTTPS_PROXY",
+        "NO_PROXY",
+        "http_proxy",
+        "https_proxy",
+        "no_proxy",
+        "NODE_EXTRA_CA_CERTS",
+        "SSL_CERT_FILE",
+        "SSL_CERT_DIR",
+        "NODE_OPTIONS"
+      ]
+    }
+  }
+}

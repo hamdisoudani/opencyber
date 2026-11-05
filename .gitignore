@@ -1,0 +1,19 @@
+# Dependencies & build outputs
+node_modules/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+
+# Secrets & local environment (NEVER COMMIT)
+.env
+.env.*
+!.env.example
+
+# Local runtime state, worktrees, blobs & embedded PGlite databases
+.opencyber-data/
+.aegis-runtime/
+**/.aegis-runtime/
+coverage/
+*.log
+.DS_Store

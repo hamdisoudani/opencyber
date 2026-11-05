@@ -1,0 +1,22 @@
+{
+  "name": "@opencyber/egress-gateway",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "NODE_USE_ENV_PROXY=1 vitest run"
+  },
+  "dependencies": {
+    "@opencyber/shared": "workspace:*",
+    "rate-limiter-flexible": "^11.2.4"
+  }
+}
